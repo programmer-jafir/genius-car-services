@@ -10,8 +10,9 @@ useEffect( ()=>{
     .then(data=> setServices(data))
 },[])
     return (
-        <div>
-            <h1 className="services-title mt-5">Our Services</h1>
+        <div className="container">
+            <div className="row">
+            <h1 className="text-primary text-center mt-5">Our Services</h1>
             <div className="services-container">
             {
                 services.map(service => <Service
@@ -19,6 +20,7 @@ useEffect( ()=>{
                 service={service}
                 ></Service>)
             }
+            </div>
             </div>
         </div>
     );
